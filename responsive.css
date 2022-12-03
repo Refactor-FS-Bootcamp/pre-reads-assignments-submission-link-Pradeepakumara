@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    background-color: aqua;
+    animation-name: headone;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.header h1{
+    font-size: 5rem;
+    font-family:'Times New Roman', Times, serif;
+    color: antiquewhite;
+}
+.header p{
+    color: antiquewhite;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@keyframes headone{
+    0%{
+        background-color: brown;
+    }
+    25%{
+        background-color: chartreuse;
+    }
+    50%{
+        background-color: chocolate;
+    }
+    75%{
+        background-color: crimson;
+    }
+    100%{
+        background-color: fuchsia;
+    }
+}
+
+#gallery{
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+.gallery-container{
+    margin: 20px 0;
+    max-width: 95vh;
+}
+
+.gallery-item{
+    text-align: center;
+    margin: 20px auto;
+    width: 75vw;
+    border: 1px solid yellow;
+     background-color: rgb(132, 255, 0);
+}
+.gallery-item h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: aqua;
+}
+.gallery-item img{
+    width: 100%;
+    height: 50vh;
+}
+.gallery-item p{
+    font-weight: bold;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gallery-item:hover{
+    box-shadow: 5px 5px 10px white, -5px -5px 10px white;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 35rem) {
+    .gallery-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1em;
+    }
+    .gallery-item{
+        width: 43vw;
+    }
+}
+
+@media screen and (min-width: 58rem) {
+    .gallery-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1em;
+    }
+    .gallery-item{
+        width: 30vw;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    .gallery-container{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-column-gap: 1em;
+    }
+    .gallery-item{
+        width: 15vw;
+        overflow: hidden;
+    }
+}
+
