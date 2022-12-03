@@ -6,6 +6,7 @@
 
 .header{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -19,6 +20,11 @@
     font-size: 5rem;
     font-family:'Times New Roman', Times, serif;
     color: antiquewhite;
+}
+.header p{
+    font-size: 1.5rem;
+    color: antiquewhite;
+    padding: 10px;
 }
 
 @keyframes headone{
